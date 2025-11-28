@@ -1,8 +1,6 @@
 from django.shortcuts import render
-
-# Create your views here.
-from .models import Actividad
+from .models import Actividad  # Asegúrate de importar tu modelo
 
 def lista_actividades(request):
-    actividades = Actividad.objects.all()
+    actividades = Actividad.objects.all()  # Trae todas las actividades de la BD
     return render(request, "lista_actividades.html", {"actividades": actividades})
