@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listado de Actividades</title>
+</head>
+<body>
+    <h1>Listado de Actividades</h1>
+    <ul>
+        {% for actividad in actividades %}
+            <li>
+                <strong>{{ actividad.titulo }}</strong> -
+                {{ actividad.fecha }}<br>
+                {{ actividad.descripcion }}
+            </li>
+        {% empty %}
+            <li>No hay actividades registradas.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
